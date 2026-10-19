@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Página temática de Futurama - Planet Express, tu servicio de entrega intergaláctico">
+    <meta name="author" content="BendeRCL">
+    <title>Futurama - Planet Express</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>-
+    <header class="header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1 class="logo">🚀 Planet Express</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="curriculum.html">Contrátame</a></li>
+                    <li><a href="index.html#personajes" class="nav-link">Personajes</a></li>
+                    <li><a href="index.html#caracteristicas" class="nav-link">Servicios</a></li>
+                    <li><a href="api.html" class="nav-link api-nav-active" aria-current="page">Tripulacion (API)</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+
+
+                <button class="btn-nav-cta" type="button" aria-label="Enviar un paquete ahora">
+                    📦 Enviar Paquete
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-label">HOME PAGE</span>
+                    <h2>Bienvenido a <span class="hero-highlight">Planet Express</span></h2>
+                    <p>Tu servicio de entrega intergaláctico</p>
+                    <p class="hero-subtitle">El futuro nunca fue tan divertido. Entregamos en cualquier parte del
+                        universo.</p>
+
+                    <div class="hero-buttons">
+
+                        <button id="btnMostrar" class="btn-primary" type="button" aria-label="Explorar servicios">
+                            Conoce nuestros Servicios
+                        </button>
+                        <button id="btnPersonajes" class="btn-secondary" type="button" aria-label="Conocer el equipo">
+                            Nuestro equipo
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="hero-image-container">
+                    <figure>
+                        <img src="img/futurama-logo.png" alt="Logo de Futurama - Planet Express" class="hero-image"
+                            width="400" height="400" loading="lazy">
+                        <figcaption>Futurama - El futuro te espera</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="personajes" class="personajes">
+            <div class="section-container">
+                <h2>Nuestro Equipo de Entrega</h2>
+                <p class="section-subtitle">Los mejores profesionales del año 3000</p>
+
+                <div class="contenedor-personajes" role="list">
+
+                    <article class="tarjeta-personaje" role="listitem">
+                        <figure class="imagen-personaje">
+                            <img src="img/bender.png" alt="Bender Bending Rodríguez - Robot de doblado" width="150"
+                                height="150" loading="lazy">
+
+                        </figure>
+                        <h3>Bender Bending Rodríguez</h3>
+                        <p>Robot de doblado. Amante de la cerveza y el dinero.</p>
+                        <time datetime="3000">Año 3000</time>
+                    </article>
+
+
+                    <article class="tarjeta-personaje" role="listitem">
+                        <figure class="imagen-personaje">
+                            <img src="img/fry.png" alt="Philip J. Fry - Repartidor de pizza del pasado" width="150"
+                                height="150" loading="lazy">
+
+                        </figure>
+                        <h3>Philip J. Fry</h3>
+                        <p>Repartidor de pizza del pasado. Viajero del tiempo.</p>
+                        <time datetime="1999">Año 1999</time>
+                    </article>
+
+
+                    <article class="tarjeta-personaje" role="listitem">
+                        <figure class="imagen-personaje">
+                            <img src="img/leela.png" alt="Turanga Leela - Capitana de Planet Express" width="150"
+                                height="150" loading="lazy">
+
+                        </figure>
+                        <h3>Turanga Leela</h3>
+                        <p>Capitana de Planet Express. Única cíclope de su generación.</p>
+                        <time datetime="2975">Año 2975</time>
+                    </article>
+
+
+                    <article class="tarjeta-personaje" role="listitem">
+                        <figure class="imagen-personaje">
+                            <img src="img/professor.png" alt="Professor Farnsworth - Inventor excéntrico y CEO"
+                                width="150" height="150" loading="lazy">
+                        </figure>
+                        <h3>Professor Farnsworth</h3>
+                        <p>Inventor excéntrico. CEO de Planet Express.</p>
+                        <time datetime="2870">Año 2870</time>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="caracteristicas" class="caracteristicas">
+            <div class="section-container">
+                <h2>¿Por qué elegirnos?</h2>
+                <p class="section-subtitle">Servicios de calidad intergaláctica</p>
+
+                <div class="features-grid">
+
+                    <article class="feature">
+                        <figure>
+                            <img src="img/icon-rapido.png" alt="Icono de velocidad" class="feature-icon" width="60"
+                                height="60" loading="lazy">
+                            <figcaption>Servicio Rápido</figcaption>
+                        </figure>
+                        <h3>⚡ Rápido</h3>
+                        <p>Entrega garantizada en el futuro</p>
+                    </article>
+
+
+                    <article class="feature">
+                        <figure>
+                            <img src="img/icon-confiable.png" alt="Icono de confiabilidad" class="feature-icon"
+                                width="60" height="60" loading="lazy">
+                            <figcaption>Servicio Confiable</figcaption>
+                        </figure>
+                        <h3>🎯 Confiable</h3>
+                        <p>Servicio de calidad intergaláctica</p>
+                    </article>
+
+
+                    <article class="feature">
+                        <figure>
+                            <img src="img/icon-innovador.png" alt="Icono de innovación" class="feature-icon" width="60"
+                                height="60" loading="lazy">
+                            <figcaption>Servicio Innovador</figcaption>
+                        </figure>
+                        <h3>🚀 Innovador</h3>
+                        <p>Tecnología del año 3000</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <div class="section-container">
+                <h2>Contacta con nosotros</h2>
+                <p class="section-subtitle">Envía tu consulta ahora</p>
+
+                <div class="contacto-container">
+                    <figure class="nave-figura">
+                        <img src="img/planeta-express.jpg"
+                            alt="Nave Planet Express - Simbolo de nuestro servicio de entrega" class="nave-imagen"
+                            width="300" height="200" loading="lazy">
+                    </figure>
+
+                    <form class="formulario" id="formularioContacto" method="POST" action="#" novalidate>
+                        <fieldset>
+                            <legend>Información de Contacto</legend>
+
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo"
+                                    aria-required="true" aria-describedby="nombre-help">
+                                <small id="nombre-help">Ingresa tu nombre real</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com"
+                                    aria-required="true" aria-describedby="email-help">
+                                <small id="email-help">Usaremos este email para contactarte</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Tu mensaje aquí..."
+                                    aria-required="true" aria-describedby="mensaje-help"></textarea>
+                                <small id="mensaje-help">Máximo 500 caracteres</small>
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" class="btn-submit" aria-label="Enviar formulario de contacto">
+                            Enviar Mensaje →
+                        </button>
+                    </form>
+                </div>
+
+
+                <div id="mensajeExito" class="mensaje-exito oculto" role="alert" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <figure class="footer-figura">
+                    <img src="img/logo-footer.png" alt="Escuadron Planet Espress" class="footer-logo" width="100"
+                        height="100" loading="lazy">
+                </figure>
+                <div class="footer-text">
+                    <p> <time datetime="2026">2026</time> Planet Express. Entregando el futuro hoy.</p>
+                    <address>
+                        <p>Contacto: <a href="mailto:info@planetexpress.com">info@planetexpress.com</a></p>
+                        <p>Ubicación: Nueva Nueva York, Año 3000</p>
+                        <p>Diseño y caracterizacion: BendeRCL 2026</p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

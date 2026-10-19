@@ -1,0 +1,27 @@
+/* Estilos exclusivos de la página de documentación de la API. */
+.api-page .api-nav-active { color: var(--color-primary); }
+.api-main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding: 3.5rem 0 5rem; }
+.api-hero { padding: clamp(2rem, 6vw, 5rem); border: 1px solid rgba(255,109,0,.25); border-radius: 22px; background: radial-gradient(ellipse at top right, rgba(0,188,212,.13), transparent 48%), linear-gradient(135deg, rgba(255,109,0,.10), rgba(255,255,255,.025)); text-align: center; }
+.api-eyebrow,.api-kicker { color: var(--color-secondary); font-size: .78rem; font-weight: 800; letter-spacing: .16em; }
+.api-hero h2 { margin: .7rem 0; color: var(--color-light); font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.1; }
+.api-hero h2 span { color: var(--color-primary); }
+.api-hero > p { max-width: 700px; margin: 0 auto; color: #c8c8c8; }
+.api-status { display: inline-flex; align-items: center; gap: .6rem; margin-top: 1.5rem; padding: .65rem 1rem; border-radius: 999px; background: rgba(0,0,0,.3); border: 1px solid rgba(255,255,255,.1); font-size: .9rem; }
+.status-dot { width: 9px; height: 9px; border-radius: 50%; background: #eab308; box-shadow: 0 0 12px currentColor; }
+.api-status.connected .status-dot { background: #22c55e; }.api-status.error .status-dot { background: #ef4444; }
+.api-section,.api-json-section { margin-top: 3.5rem; }
+.api-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+.api-section-heading h2 { margin-top: .25rem; color: var(--color-light); font-size: clamp(1.5rem, 3vw, 2rem); }
+.api-section-heading > p { color: #aaa; font-size: .9rem; }
+.endpoint-card { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.2rem; margin-top: .75rem; border: 1px solid rgba(255,255,255,.1); border-radius: 12px; background: rgba(255,255,255,.035); }
+.endpoint-method { padding: .35rem .55rem; border-radius: 6px; background: rgba(34,197,94,.14); color: #86efac; font-size: .75rem; font-weight: 800; }
+.endpoint-info { flex: 1; min-width: 0; }.endpoint-info code { color: var(--color-secondary); font-size: 1rem; overflow-wrap: anywhere; }.endpoint-info p { margin-top: .2rem; color: #aaa; font-size: .88rem; }
+.endpoint-link { color: var(--color-primary); font-weight: 700; text-decoration: none; white-space: nowrap; }.endpoint-link:hover { color: #ffad66; }
+.api-reload { border: 1px solid var(--color-primary); border-radius: 8px; padding: .65rem .9rem; background: rgba(255,109,0,.1); color: #ffad66; cursor: pointer; font: inherit; font-weight: 700; }.api-reload:hover { background: rgba(255,109,0,.2); }
+.api-message { margin-bottom: 1rem; color: #aaa; }.api-characters { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1.2rem; }
+.api-character { overflow: hidden; border: 1px solid rgba(255,255,255,.1); border-radius: 14px; background: linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02)); transition: transform .25s,border-color .25s; }.api-character:hover { transform: translateY(-5px); border-color: rgba(255,109,0,.6); }
+.api-character img { display: block; width: 100%; height: 220px; object-fit: contain; padding: 1rem; background: radial-gradient(circle,rgba(0,188,212,.1),transparent 70%); }.api-character-body { padding: 1rem 1.1rem 1.2rem; }.api-character h3 { color: var(--color-primary); margin-bottom: .5rem; }.api-character p { margin-top: .35rem; color: #c7c7c7; font-size: .9rem; }.api-character strong { color: var(--color-secondary); }
+.api-json { overflow: auto; max-height: 420px; padding: 1.25rem; border: 1px solid rgba(0,188,212,.25); border-radius: 12px; background: #05090d; color: #a7f3d0; font-size: .88rem; line-height: 1.6; }
+.api-page .footer { margin-top: 0; }
+@media(max-width:900px) { .api-page .nav-container { flex-wrap: wrap; gap: 1rem; }.api-page .nav-links { order: 3; flex-basis: 100%; flex-wrap: wrap; gap: .8rem 1.2rem; justify-content: flex-start; }.api-page .api-nav-button { margin-left: auto; } }
+@media(max-width:560px) { .api-main { width: min(100% - 1rem,1100px); padding-top: 1rem; }.api-hero { padding: 2rem 1rem; }.api-section-heading { align-items: flex-start; flex-direction: column; }.endpoint-card { align-items: flex-start; flex-wrap: wrap; }.endpoint-info { flex-basis: calc(100% - 5rem); }.endpoint-link { margin-left: auto; } }
