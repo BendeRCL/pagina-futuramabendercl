@@ -81,3 +81,16 @@ El proyecto acepta claves en minuscula o mayuscula inicial:
 - Selector por ocupacion.
 - Selector por especie.
 - Boton para limpiar todos los filtros.
+
+- ## Autor
+
+Desarrollado por BendeRCL.
+
+## Proximas mejoras
+
+- Paginacion o carga por bloques.
+- Boton para mostrar u ocultar el JSON.
+- Mas filtros avanzados.
+- Mejoras de accesibilidad y responsive.
+
+
