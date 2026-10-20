@@ -26,9 +26,11 @@ PlanetExpress/
 |-- api.html
 |-- index.html
 |-- curriculum.html
+|-- portafolio.html
 |-- css/
-|   |-- styles.css
-|   `-- api-styles.css
+|   /-- styles.css
+|   /-- api-styles.css
+|   /-- porta-styles.css
 |-- js/
 |   |-- api-page.js
 |   `-- personajes.js
