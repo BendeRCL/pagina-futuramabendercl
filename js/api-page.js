@@ -2,12 +2,15 @@ const apiStatus = document.getElementById('apiStatus');
 const charactersContainer = document.getElementById('apiCharacters');
 const charactersMessage = document.getElementById('charactersMessage');
 const jsonOutput = document.getElementById('jsonOutput');
+
 const reloadButton = document.getElementById('reloadCharacters');
 
 const filterName = document.getElementById('filterName');
 const filterOccupation = document.getElementById('filterOccupation');
 const filterSpecies = document.getElementById('filterSpecies');
 const clearFiltersButton = document.getElementById('clearFilters');
+
+const API_URL = 'https://api.npoint.io/540b1b8a67d18b74cc69';
 
 let personajesBase = [];
 
@@ -157,18 +160,29 @@ async function fetchPersonajes() {
         return window.personajes;
     }
 
-    const response = await fetch('json/personajes.json');
-    if (!response.ok) {
-        throw new Error(`El servidor respondió con HTTP ${response.status}`);
-    }
+    try {
+        const response = await fetch(API_URL);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
 
-    return await response.json();
+        const data = await response.json();
+        return Array.isArray(data) ? data : [];
+    } catch (error) {
+        const fallbackResponse = await fetch('json/personajes.json');
+        if (!fallbackResponse.ok) {
+            throw new Error(`No se pudo cargar la API ni el JSON local. ${error.message}`);
+        }
+
+        const fallbackData = await fallbackResponse.json();
+        return Array.isArray(fallbackData) ? fallbackData : [];
+    }
 }
 
 async function cargarPersonajesAPI() {
-    charactersMessage.textContent = 'Cargando personajes desde la API local...';
+    charactersMessage.textContent = 'Cargando personajes desde la API...';
     charactersContainer.replaceChildren();
-    jsonOutput.textContent = 'Consultando json/personajes.json (o variable global window.personajes)...';
+    jsonOutput.textContent = 'Consultando API externa...';
 
     try {
         const personajes = await fetchPersonajes();
@@ -187,14 +201,8 @@ async function cargarPersonajesAPI() {
         apiStatus.classList.add('error');
         apiStatus.innerHTML = '<span class="status-dot"></span> No se pudo conectar con la API';
 
-        if (!window.personajes) {
-            charactersMessage.textContent = 'Abre esta carpeta con Live Server o sirve los archivos por HTTP, o usa la versión sin servidor.';
-            jsonOutput.textContent = `${error.message}
-Si deseas abrir el HTML directamente (file://), crea el archivo js/personajes.js con la variable global window.personajes.`;
-        } else {
-            charactersMessage.textContent = 'Error procesando los datos embebidos. Presiona "Actualizar".';
-            jsonOutput.textContent = error.message;
-        }
+        charactersMessage.textContent = 'No se pudieron cargar los personajes.';
+        jsonOutput.textContent = error.message;
     }
 }
 

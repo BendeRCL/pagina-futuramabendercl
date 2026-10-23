@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/api-styles.css">
 </head>
+
 <body class="api-page">
     <header class="header">
         <nav class="navbar" aria-label="Navegación principal">
@@ -24,78 +26,73 @@
                     <li><a href="curriculum.html">Contrátame</a></li>
                     <li><a href="index.html#personajes" class="nav-link">Personajes</a></li>
                     <li><a href="index.html#caracteristicas" class="nav-link">Servicios</a></li>
-                    <li><a href="api.html" class="nav-link api-nav-active" aria-current="page">Tripulacion (API)</a></li>
+                    <li><a href="api.html" class="nav-link api-nav-active" aria-current="page">Tripulacion (API)</a>
+                    </li>
                     <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
                 </ul>
 
                 <a class="btn-nav-cta api-nav-button" href="json/personajes.json" target="_blank" rel="noopener">
-                    Ver JSON ↗
+                    Ver JSON (estructura opciones o diccionario)
                 </a>
             </div>
         </nav>
     </header>
 
     <main class="api-main">
-        <section class="api-hero">
-            <span class="api-eyebrow">PLANET EXPRESS · DESARROLLO LOCAL</span>
-            <h2>Personajes de <span>Futurama</span></h2>
             <div class="api-status" id="apiStatus" role="status" aria-live="polite">
                 <span class="status-dot"></span> Conectando con la API local...
             </div>
         </section>
 
-        <section class="api-section" aria-labelledby="charactersTitle">
-            <div class="api-section-heading">
+        <article class="api-section" aria-labelledby="charactersTitle">
+            <header class="api-section-heading">
                 <div>
                     <span class="api-kicker">PERSONAJES ACTUALES</span>
                     <h2 id="charactersTitle">FUTURAMA</h2>
                 </div>
 
-                <button id="reloadCharacters" class="api-reload" type="button">↻ Actualizar</button>
-            </div>
+                <button id="reloadCharacters" class="api-reload" type="button">↻ Actualizar</button> 
+            </header>
 
             <div class="api-filters card border-0 shadow-sm mb-4">
                 <div class="card-body">
                     <div class="row g-3 align-items-end">
                         <div class="col-12 col-md-4">
-                            <label for="filterName" class="form-label">Filtrar por nombre</label>
-                            <input
-                                type="text"
-                                id="filterName"
-                                class="form-control"
-                                placeholder="Ej: Bender, Leela, Fry"
-                            >
+                            <label for="filterName" class="form-label">Escribe el nombre del personaje</label>
+                            <input type="text" id="filterName" class="form-control"
+                                placeholder="Ej: Bender, Leela, Fry">
                         </div>
 
                         <div class="col-12 col-md-3">
-                            <label for="filterOccupation" class="form-label">Ocupación</label>
+                            <label for="filterOccupation" class="form-label">¿Que hace tu personaje?</label>
                             <select id="filterOccupation" class="form-select">
                                 <option value="">Todas</option>
                             </select>
                         </div>
 
                         <div class="col-12 col-md-3">
-                            <label for="filterSpecies" class="form-label">Especie</label>
+                            <label for="filterSpecies" class="form-label">¿Especie?</label>
                             <select id="filterSpecies" class="form-select">
-                                <option value="">Todas</option>
+                                <option value="">Todas</option> 
                             </select>
                         </div>
 
                         <div class="col-12 col-md-2 d-grid">
                             <button id="clearFilters" type="button" class="btn btn-outline-warning">
-                                Limpiar
+                              REFRESCAR
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <p id="charactersMessage" class="api-message" role="status" aria-live="polite">
+            <p id="charactersMessage" class="api-message" role="status" aria-live="polite"> - cantidad de personajes que actualiza la API
                 Cargando personajes...
             </p>
 
             <div id="apiCharacters" class="api-characters"></div>
-            <pre id="jsonOutput" class="api-json" hidden aria-live="polite"></pre>
+        </article>
+        <pre id="jsonOutput" class="api-json" hidden aria-live="polite"></pre>
         </section>
     </main>
 
@@ -103,14 +100,8 @@
         <div class="footer-container">
             <div class="footer-content">
                 <figure class="footer-figura">
-                    <img
-                        src="img/logo-footer.png"
-                        alt="Logo de Planet Express"
-                        class="footer-logo"
-                        width="100"
-                        height="100"
-                        loading="lazy"
-                    >
+                    <img src="img/logo-footer.png" alt="Logo de Planet Express" class="footer-logo" width="100"
+                        height="100" loading="lazy">
                 </figure>
 
                 <div class="footer-text">
@@ -127,4 +118,5 @@
     <script src="js/api-page.js" defer></script>
     <script src="js/personajes.js" defer></script>
 </body>
+
 </html>

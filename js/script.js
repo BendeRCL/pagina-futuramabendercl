@@ -84,7 +84,7 @@ function cambiarTema(tema) {
         root.style.setProperty('--color-primary', '#FF6D00');
         root.style.setProperty('--color-secondary', '#00BCD4');
     } else if (tema === 'neon') {
-        root.style.setProperty('--color-primary', '#00FF00');
+        root.style.setProperty('--color-primary', '#fffb00');
         root.style.setProperty('--color-secondary', '#FF00FF');
     } else if (tema === 'clasico') {
         root.style.setProperty('--color-primary', '#FFD700');
