@@ -40,7 +40,7 @@
 
     <main class="api-main">
             <div class="api-status" id="apiStatus" role="status" aria-live="polite">
-                <span class="status-dot"></span> Conectando con la API local...
+                <span class="status-dot"></span> Conectando con Firebase o JSON local...
             </div>
         </section>
 
@@ -114,6 +114,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        window.FIREBASE_CONFIG = {
+            apiKey: "AIzaSyCx0AUlon29l3JHP1ow3xnhab2i0h4k39Q",
+            authDomain: "teku-4a165.firebaseapp.com",
+            projectId: "teku-4a165",
+            storageBucket: "teku-4a165.firebasestorage.app",
+            messagingSenderId: "780972025146",
+            appId: "1:780972025146:web:f26547e5085d2d7323dc03"
+        };
+    </script>
 
     <script src="js/api-page.js" defer></script>
     <script src="js/personajes.js" defer></script>
